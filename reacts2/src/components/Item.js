@@ -26,7 +26,16 @@ export default class Item extends Component {
                         this.setState({openImage: true});
                         this.setState({url: baseUrl+this.props.item.image})
                     }}>
-                        {this.state.openImage && <Lightbox mainSrc={this.state.url}/>}
+                        {
+                            this.state.openImage && 
+                            <Lightbox 
+                                mainSrc = {this.state.url}
+                                onCloseRequest = {() => {
+                                    this.setState({openImage: false});
+                                    this.setState({url: ''})
+                                }} 
+                            />
+                        }
                         <img src={baseUrl+this.props.item.image} 
                             alt={this.props.item.image} 
                             style={{
