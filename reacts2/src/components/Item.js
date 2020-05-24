@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 var baseUrl = 'http://127.0.0.1:5000/s2agarradinho/';
 
 export default class Item extends Component {
+    state = {
+        openImage: false,
+        url: ''
+    }
+
     render() {
         if (this.props.item) {
             return (
@@ -15,12 +22,18 @@ export default class Item extends Component {
                     textAlign: 'center'
                     
                 }}>
-                    <img src={baseUrl+this.props.item.image} 
-                        alt={this.props.item.image} 
-                        style={{
-                            width: "80%",
-                            objectFit: 'cover'
-                    }}/>
+                    <a href='#' onClick={() => {
+                        this.setState({openImage: true});
+                        this.setState({url: baseUrl+this.props.item.image})
+                    }}>
+                        {this.state.openImage && <Lightbox mainSrc={this.state.url}/>}
+                        <img src={baseUrl+this.props.item.image} 
+                            alt={this.props.item.image} 
+                            style={{
+                                width: "80%",
+                                objectFit: 'cover'
+                        }}/>
+                    </a>
                     <p style={{
                         display: 'block',
                         width: '180px',
