@@ -40,7 +40,7 @@ function formatUrl(social) {
         social.url.substring(7,11); 
     }
     else {
-        url= social.url;
+        url = social.url;
     }
 
     return url;
@@ -52,7 +52,9 @@ export default class Social extends Component {
             console.log(this.props.social)
             return (
                     <a href={getUrl(this.props.social.media)+this.props.social.url} target="_blank"> 
-                        <img src={getImage(this.props.social.media)} alt={this.props.social.media}/>
+                        <img src={getImage(this.props.social.media)} alt={this.props.social.media} style={{
+                            verticalAlign: 'middle'
+                        }}/>
                         <span>
                             {formatUrl(this.props.social)}
                         </span>
