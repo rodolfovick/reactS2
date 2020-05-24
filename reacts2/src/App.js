@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Page from './components/Page';
 import Footer from './components/Footer';
-
 import axios from 'axios';
+
+var baseUrl = 'http://127.0.0.1:5000/s2agarradinho/';
 
 export default class App extends Component {
   state = {
@@ -11,7 +12,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:5000/s2agarradinho/pageDocument.json')
+    axios.get(baseUrl+'pageDocument.json')
       .then(res => this.setState({json: res.data}));
   }
 

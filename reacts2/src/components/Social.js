@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+var baseUrl = 'http://127.0.0.1:5000/assets/';
+
 function getUrl(media) {
     var url = '';
     if(media == 'facebook') {
@@ -18,13 +20,13 @@ function getUrl(media) {
 function getImage(media) {
     var image = '';
     if(media == 'facebook') {
-        image = 'http://127.0.0.1:5000/assets/fb.png';
+        image = baseUrl+'fb.png';
     }
     else if(media == 'instagram') {
-        image = 'http://127.0.0.1:5000/assets/ig.png'; 
+        image = baseUrl+'ig.png'; 
     }
     else if(media == 'whatsapp') {
-        image = 'http://127.0.0.1:5000/assets/ws.png';
+        image = baseUrl+'ws.png';
     } 
     
     return image;

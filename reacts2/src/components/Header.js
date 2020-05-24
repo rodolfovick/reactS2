@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Social from './Social'
 
+var baseUrl = 'http://127.0.0.1:5000/s2agarradinho/';
+
 export default class Header extends Component {
     render() {
         console.log(this.props.header)
@@ -8,7 +10,7 @@ export default class Header extends Component {
             return (
                 <div>
                 <div>
-                    <img src={'http://127.0.0.1:5000/s2agarradinho/'+this.props.header.logo} alt={''} style={{
+                    <img src={baseUrl+this.props.header.logo} alt={''} style={{
                             width: "20%"
                         }}/>
                     <h1>{this.props.header.name}</h1>
