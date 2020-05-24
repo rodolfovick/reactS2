@@ -5,14 +5,18 @@ export default class Footer extends Component {
     render() {
         if (this.props.footer) {
             return (
-                <div>
+                <div style={{
+                    margin: '10px',
+                    fontSize: '14px'
+                }}>
                     {this.props.footer.map(msg => <p>{msg}</p>)}
-                    <p>Criado por s2agarradinho.</p>
-                    <ul>
-                        <Social social={{media: 'facebook', url: 's2agarradinho'}}/>
-                        <Social social={{media: 'instagram', url: 's2agarradinho'}}/>
+                    <hr></hr>
+                    <p>Criado por Amor Agarradinho.</p>
+                    <div>
+                        <Social social={{media: 'facebook', url: 's2agarradinho'}}/>&nbsp;
+                        <Social social={{media: 'instagram', url: 's2agarradinho'}}/>&nbsp;
                         <Social social={{media: 'whatsapp', url: '19992253116'}}/>
-                    </ul>
+                    </div>
                 </div>
             )
         }

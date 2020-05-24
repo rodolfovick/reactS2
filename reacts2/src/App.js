@@ -29,9 +29,10 @@ export default class App extends Component {
         <div style={{
           backgroundColor: "#ffffff",
           color: '#000000',
-          margin: '15px'
+          margin: '15px',
+          overflow: 'hidden'
         }}>
-          <Page page={this.state.json.page}/>
+            <Page page={this.state.json.page}/>
         </div>
         
         <footer>

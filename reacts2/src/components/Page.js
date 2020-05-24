@@ -7,11 +7,7 @@ export default class Page extends Component {
             return this.props.page.map(item => (<Item item={item}/>))
         }
         else {
-            return (
-                <div>
-                    
-                </div>
-            )
+            return (<div></div>)
         }
     }
 }

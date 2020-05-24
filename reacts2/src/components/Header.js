@@ -8,29 +8,39 @@ export default class Header extends Component {
         console.log(this.props.header)
         if (this.props.header) {
             return (
-                <div>
-                <div>
-                    <img src={baseUrl+this.props.header.logo} alt={''} style={{
-                            width: "20%"
-                        }}/>
-                    <h1>{this.props.header.name}</h1>
-                </div>
-                <div>
-                    <ul>
-                    {
-                        this.props.header.social.map(social => <Social social={social}/>)
-                    }
-                    </ul>
-                </div>
+                <div style={{
+                    overflow: 'hidden'
+                }}>
+                    <div style={{
+                                maxWidth: '200px',
+                                padding: '10px',
+                                float: 'left'
+                            }}>
+                        <img src={baseUrl+this.props.header.logo} alt={''} style={{
+                                width: '100%'
+                            }}/>
+                    </div>
+                    <div style={{
+                                padding: '10px',
+                                float: 'left'
+                    }}>
+                        <h1 style={{
+                            textAlign: 'center'
+                         }}>
+                            {this.props.header.name}
+                        </h1>
+                        <ul style={{
+                            listStyleType: 'none',
+                            textAlign: 'left'
+                         }}>
+                            {this.props.header.social.map(social => <li><Social social={social}/></li>)}
+                        </ul>
+                    </div>
                 </div>
             )
         }
         else {
-            return (
-                <div>
-
-                </div>
-            )
+            return (<div></div>)
         }
     }
 }

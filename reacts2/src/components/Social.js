@@ -51,12 +51,12 @@ export default class Social extends Component {
         if (this.props.social) {
             console.log(this.props.social)
             return (
-                <li>
                     <a href={getUrl(this.props.social.media)+this.props.social.url} target="_blank"> 
                         <img src={getImage(this.props.social.media)} alt={this.props.social.media}/>
-                        {formatUrl(this.props.social)}
-                     </a>
-                </li> 
+                        <span>
+                            {formatUrl(this.props.social)}
+                        </span>
+                     </a> 
             )
         }
         else {
