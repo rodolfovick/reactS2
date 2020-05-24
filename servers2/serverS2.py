@@ -2,12 +2,18 @@ import os
 from flask import Flask
 from flask import send_file
 from flask import make_response
+from flask import send_from_directory
 app = Flask(__name__)
 
 
 @app.route('/')
 def welcome():
     return 'Welcome to serverS2'
+
+
+@app.route('/assets/<string:file>')
+def getAssets(file):
+    return send_from_directory('assets', file)
 
 
 @app.route('/<string:folder>/<string:file>')

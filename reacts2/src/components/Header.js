@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Social from './Social'
 
 export default class Header extends Component {
     render() {
@@ -15,7 +16,7 @@ export default class Header extends Component {
                 <div>
                     <ul>
                     {
-                        this.props.header.social.map(social => <li>{social.media+'/'+social.url}</li>)
+                        this.props.header.social.map(social => <Social social={social}/>)
                     }
                     </ul>
                 </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Social from './Social'
 
 export default class Footer extends Component {
     render() {
@@ -8,15 +9,9 @@ export default class Footer extends Component {
                     {this.props.footer.map(msg => <p>{msg}</p>)}
                     <p>Criado por s2agarradinho.</p>
                     <ul>
-                        <li>
-                            <a href={'https://www.instagram.com/s2agarradinho/'}>Instagram</a>
-                        </li>
-                        <li>
-                            <a href={'https://www.facebook.com/s2agarradinho/'}>Facebook</a>
-                        </li>
-                        <li>
-                            <a href={'https://wa.me/5519992253116'}>Whatsapp</a>
-                        </li>
+                        <Social social={{media: 'facebook', url: 's2agarradinho'}}/>
+                        <Social social={{media: 'instagram', url: 's2agarradinho'}}/>
+                        <Social social={{media: 'whatsapp', url: '19992253116'}}/>
                     </ul>
                 </div>
             )
