@@ -11,12 +11,29 @@ def welcome():
     return 'Welcome to serverS2'
 
 
-@app.route('/assets/<string:file>')
-def getAssets(file):
+@app.route('/<string:folder>/')
+def getIndex(folder):
+    return send_from_directory('build', 'index.html')
+
+
+@app.route('/<string:file>')
+def getFile(file):
+    return send_from_directory('build', file)
+
+
+@app.route('/static/<string:folder>/<string:file>')
+def getStatic(folder, file):
+    return send_from_directory('build/static/'+folder, file)
+
+
+#assets
+@app.route('/<string:folder>/assets/<string:file>')
+def getAssets(folder, file):
     return send_from_directory('assets', file)
 
 
-@app.route('/<string:folder>/<string:file>')
+# Page data
+@app.route('/<string:folder>/data/<string:file>')
 def returnFile(folder, file):
     extention = os.path.splitext(file)[-1]
     filename = folder+'/'+file

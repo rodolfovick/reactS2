@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-var baseUrl = 'http://127.0.0.1:5000/assets/';
+var baseUrl = 'assets/';
 
 function getUrl(media) {
     var url = '';

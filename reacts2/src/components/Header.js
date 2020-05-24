@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Social from './Social'
 
-var baseUrl = 'http://127.0.0.1:5000/s2agarradinho/';
+var baseUrl = 'data/';
 
 export default class Header extends Component {
     render() {
@@ -12,7 +12,7 @@ export default class Header extends Component {
                     overflow: 'hidden'
                 }}>
                     <div style={{
-                                maxWidth: '200px',
+                                maxWidth: '150px',
                                 padding: '10px',
                                 float: 'left'
                             }}>

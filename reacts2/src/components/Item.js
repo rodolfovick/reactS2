@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-var baseUrl = 'http://127.0.0.1:5000/s2agarradinho/';
+var baseUrl = 'data/';
 
 export default class Item extends Component {
     state = {
@@ -15,7 +15,7 @@ export default class Item extends Component {
             return (
                 <div style={{
                     float: 'left',
-                    width: '180px',
+                    width: '150px',
                     height: '350px',
                     overflow: 'auto',
                     padding: '10px',

@@ -4,7 +4,7 @@ import Page from './components/Page';
 import Footer from './components/Footer';
 import axios from 'axios';
 
-var baseUrl = 'http://127.0.0.1:5000/s2agarradinho/';
+var baseUrl = 'data/';
 
 export default class App extends Component {
   state = {

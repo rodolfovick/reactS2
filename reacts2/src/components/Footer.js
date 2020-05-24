@@ -17,6 +17,7 @@ export default class Footer extends Component {
                         <Social social={{media: 'instagram', url: 's2agarradinho'}}/>&nbsp;
                         <Social social={{media: 'whatsapp', url: '19992253116'}}/>
                     </div>
+                    <br></br>
                 </div>
             )
         }
