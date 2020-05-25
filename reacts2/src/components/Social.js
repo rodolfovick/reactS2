@@ -49,7 +49,6 @@ function formatUrl(social) {
 export default class Social extends Component {
     render() {
         if (this.props.social) {
-            console.log(this.props.social)
             return (
                     <a href={getUrl(this.props.social.media)+this.props.social.url} target="_blank"> 
                         <img src={getImage(this.props.social.media)} alt={this.props.social.media} style={{

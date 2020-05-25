@@ -15,8 +15,10 @@ export default class Item extends Component {
             return (
                 <div style={{
                     float: 'left',
-                    width: '150px',
-                    height: '350px',
+                    width: '50%',
+                    maxWidth: '200px',
+                    height: 'auto',
+                    minHeight: '350px',
                     overflow: 'auto',
                     padding: '10px',
                     textAlign: 'center'
@@ -45,7 +47,7 @@ export default class Item extends Component {
                     </a>
                     <p style={{
                         display: 'block',
-                        width: '180px',
+                        width: '80%',
                         height: 'auto',
                         wordBreak:'break-all',
                         wordWrap: 'break-word',

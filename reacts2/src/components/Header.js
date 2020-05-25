@@ -5,7 +5,6 @@ var baseUrl = 'data/';
 
 export default class Header extends Component {
     render() {
-        console.log(this.props.header)
         if (this.props.header) {
             return (
                 <div style={{
@@ -13,6 +12,7 @@ export default class Header extends Component {
                 }}>
                     <div style={{
                                 maxWidth: '150px',
+                                width: '40%',
                                 padding: '10px',
                                 float: 'left'
                             }}>
@@ -21,11 +21,14 @@ export default class Header extends Component {
                             }}/>
                     </div>
                     <div style={{
+                                maxWidth: '200px',
+                                width: '60%',
                                 padding: '10px',
                                 float: 'left'
                     }}>
                         <h1 style={{
-                            textAlign: 'center'
+                            fontSize: '22px',
+                            textAlign: 'left'
                          }}>
                             {this.props.header.name}
                         </h1>

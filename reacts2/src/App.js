@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Page from './components/Page';
 import Footer from './components/Footer';
 import axios from 'axios';
+import './App.css';
 
 var baseUrl = 'data/';
 
